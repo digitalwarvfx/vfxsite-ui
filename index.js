@@ -82,3 +82,86 @@ window.addEventListener('scroll', () => {
         section.style.backgroundPositionY = yPos;
     });
 });
+
+const track = document.getElementById("carouselTrack");
+const cards = document.querySelectorAll("#carouselTrack > div");
+
+let index = 0;
+
+function getVisibleCards() {
+  return window.innerWidth >= 768 ? 3 : 1;
+}
+
+function updateCarousel() {
+  const visibleCards = getVisibleCards();
+
+  const cardWidth = cards[0].offsetWidth + 20;
+
+  track.style.transform =
+    `translateX(-${index * cardWidth}px)`;
+}
+
+document.getElementById("nextBtn")
+  .addEventListener("click", () => {
+
+    const visibleCards = getVisibleCards();
+
+    if (index < cards.length - visibleCards) {
+      index++;
+    } else {
+      index = 0;
+    }
+
+    updateCarousel();
+  });
+
+document.getElementById("prevBtn")
+  .addEventListener("click", () => {
+
+    const visibleCards = getVisibleCards();
+
+    if (index > 0) {
+      index--;
+    } else {
+      index = cards.length - visibleCards;
+    }
+
+    updateCarousel();
+  });
+
+// Auto Slide
+setInterval(() => {
+  const visibleCards = getVisibleCards();
+
+  if (index < cards.length - visibleCards) {
+    index++;
+  } else {
+    index = 0;
+  }
+
+  updateCarousel();
+}, 4000);
+
+// Mobile Swipe
+let startX = 0;
+
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+track.addEventListener("touchend", (e) => {
+
+  let endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) {
+    document.getElementById("nextBtn").click();
+  }
+
+  if (endX - startX > 50) {
+    document.getElementById("prevBtn").click();
+  }
+});
+
+window.addEventListener("resize", updateCarousel);
+
+updateCarousel();
