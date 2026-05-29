@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,26 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
+
         .parallax {
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
+
         .hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
+
         .showreel {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=2059&q=80');
         }
+
         .services {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1930&q=80');
         }
+
         .fade-in {
             animation: fadeIn 1s ease-in-out forwards;
         }
@@ -34,29 +40,47 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
         }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .carousel-track {
+            transition: transform 0.6s ease;
+        }
     </style>
 </head>
+
 <body class="bg-black text-white opacity-0 fade-in">
     <!-- Navigation -->
     <nav class="fixed w-full bg-black bg-opacity-80 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-red-600">DigitalWarVFX</div>
+                <div class="text-2xl font-bold text-red-600"><img src='./assets/digitalwar.png' alt="DigitalWarVFX"
+                        height="40px" width="120px" /></div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="hover:text-red-500 transition">Home</a>
                     <a href="#about" class="hover:text-red-500 transition">About</a>
                     <a href="#services" class="hover:text-red-500 transition">Services</a>
                     <a href="#showreel" class="hover:text-red-500 transition">Showreel</a>
+                    <a href="#Projects" class="hover:text-red-500 transition">Portfolio</a>
                     <a href="#contact" class="hover:text-red-500 transition">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button class="mobile-menu-button">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -69,7 +93,8 @@
         <div class="container mx-auto px-6">
             <h1 class="text-5xl md:text-7xl font-bold mb-6">DigitalWarVFX</h1>
             <p class="text-xl md:text-2xl mb-8">Creating Visual Magic...</p>
-            <a href="#showreel" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+            <a href="#showreel"
+                class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
                 View Our Showreel
             </a>
         </div>
@@ -82,12 +107,18 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-2xl font-bold mb-4">Pushing the Boundaries of Visual Effects</h3>
-                    <p class="text-gray-300 mb-6">We bring pioneering technology and top-notch creativity into play, creating visuals that exceed your expectations. With great attention to detail, we make every effort to bring your fruits to fruition. You just have to say your dream and we’ll be competently working on it and helping you enjoy the distinct VFX effect.</p>
-                    <p class="text-gray-300">Commitment is the key to our excellence and with high-end technological infrastructure available, we always have the drive to reach international standards. Quality is our drive to perform with a keen eye on the project throughout its span. commitment, excellence, communication and outstanding delivery are etched into our team.</p>
+                    <p class="text-gray-300 mb-6">We bring pioneering technology and top-notch creativity into play,
+                        creating visuals that exceed your expectations. With great attention to detail, we make every
+                        effort to bring your fruits to fruition. You just have to say your dream and we’ll be
+                        competently working on it and helping you enjoy the distinct VFX effect.</p>
+                    <p class="text-gray-300">Commitment is the key to our excellence and with high-end technological
+                        infrastructure available, we always have the drive to reach international standards. Quality is
+                        our drive to perform with a keen eye on the project throughout its span. commitment, excellence,
+                        communication and outstanding delivery are etched into our team.</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="bg-gray-800 p-6 rounded-lg">
-                        <h4 class="text-red-500 text-xl font-bold mb-2">10+</h4>
+                        <h4 class="text-red-500 text-xl font-bold mb-2">20+</h4>
                         <p class="text-gray-300">Projects Completed</p>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg">
@@ -95,7 +126,7 @@
                         <p class="text-gray-300">Team Members</p>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg">
-                        <h4 class="text-red-500 text-xl font-bold mb-2">10+</h4>
+                        <h4 class="text-red-500 text-xl font-bold mb-2">15+</h4>
                         <p class="text-gray-300">Years Experience</p>
                     </div>
                     <!-- <div class="bg-gray-800 p-6 rounded-lg">
@@ -115,36 +146,43 @@
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">✂️</div>
                     <h3 class="text-xl font-bold mb-3">ROTOSCOPE</h3>
-                    <p class="text-gray-300">Precise frame-by-frame masking and isolation of objects, characters, and elements for seamless compositing and visual effects integration.</p>
+                    <p class="text-gray-300">Precise frame-by-frame masking and isolation of objects, characters, and
+                        elements for seamless compositing and visual effects integration.</p>
                 </div>
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">🎨</div>
                     <h3 class="text-xl font-bold mb-3">PAINT-PREP</h3>
-                    <p class="text-gray-300">Expert paint and prep work including wire removal, rig removal, object cleanup, and preparing clean plates for seamless compositing.</p>
+                    <p class="text-gray-300">Expert paint and prep work including wire removal, rig removal, object
+                        cleanup, and preparing clean plates for seamless compositing.</p>
                 </div>
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">✨</div>
                     <h3 class="text-xl font-bold mb-3">COSMETIC FIXES</h3>
-                    <p class="text-gray-300">Beauty work, skin retouching, blemish removal, and digital makeup to enhance talent appearance and maintain visual consistency.</p>
+                    <p class="text-gray-300">Beauty work, skin retouching, blemish removal, and digital makeup to
+                        enhance talent appearance and maintain visual consistency.</p>
                 </div>
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">📐</div>
                     <h3 class="text-xl font-bold mb-3">MATCHMOVE</h3>
-                    <p class="text-gray-300">Camera tracking and 3D matchmoving to seamlessly integrate CG elements with live-action footage, ensuring perfect perspective and movement.</p>
+                    <p class="text-gray-300">Camera tracking and 3D matchmoving to seamlessly integrate CG elements with
+                        live-action footage, ensuring perfect perspective and movement.</p>
                 </div>
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">🖥️</div>
                     <h3 class="text-xl font-bold mb-3">COMPOSITING</h3>
-                    <p class="text-gray-300">Expert layering and blending of multiple elements including live-action, CG, matte paintings, and effects to create the final seamless shot.</p>
+                    <p class="text-gray-300">Expert layering and blending of multiple elements including live-action,
+                        CG, matte paintings, and effects to create the final seamless shot.</p>
                 </div>
                 <div class="bg-black bg-opacity-70 p-8 rounded-lg backdrop-blur-sm">
                     <div class="text-red-500 text-4xl mb-4">🎬</div>
                     <h3 class="text-xl font-bold mb-3">CG</h3>
-                    <p class="text-gray-300">Full 3D computer graphics including modeling, texturing, lighting, rendering, and animation for photorealistic digital assets and environments.</p>
+                    <p class="text-gray-300">Full 3D computer graphics including modeling, texturing, lighting,
+                        rendering, and animation for photorealistic digital assets and environments.</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Showreel Section -->
     <section id="showreel" class="py-20 parallax showreel">
@@ -152,9 +190,209 @@
             <h2 class="text-4xl font-bold mb-8">Our Showreel</h2>
             <div class="max-w-4xl mx-auto bg-black bg-opacity-70 p-1 rounded-lg">
                 <div class="aspect-w-16 aspect-h-9">`
-                    <iframe class="w-full h-[500px] rounded-lg" title="vimeo-player" src="https://player.vimeo.com/video/1114139539?h=d3330faa1e" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+                    <iframe class="w-full h-[500px] rounded-lg" title="vimeo-player"
+                        src="https://player.vimeo.com/video/1114139539?h=d3330faa1e" width="640" height="360"
+                        frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="w-full px-4 py-10">
+        <div id="Projects" class="max-w-7xl mx-auto px-4">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+
+                <div>
+                    <h2 class="text-2xl md:text-4xl font-bold text-white">
+                        Portfolio
+                    </h2>
+
+                    <p class="text-white/60 mt-1 text-sm md:text-base">
+                        Our Team's work
+                    </p>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex gap-3">
+                    <button id="prevBtn"
+                        class="glass-card w-11 h-11 rounded-full text-white hover:scale-110 transition">
+                        ❮
+                    </button>
+
+                    <button id="nextBtn"
+                        class="glass-card w-11 h-11 rounded-full text-white hover:scale-110 transition">
+                        ❯
+                    </button>
+                </div>
+
+            </div>
+
+           <div class="overflow-hidden">
+
+    <div id="carouselTrack" class="carousel-track flex gap-5">
+
+      
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/akanda2.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+        
+          <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/pushpa_2.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/Lucky_Baskhar_film_poster.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/bhairavam.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/bhramanadham.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/doubleengne.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/ghati.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/gopi_galla_goa_trip.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/hey balwanth2026.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/Kanyakumari.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/kalmegakarigindhi.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/kingdom.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/leela_vinodham.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/Maidhaan.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/mana_shakara_varaprsad.jpeg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/mathuvadlara_2.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/rajasaab.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/sankranthiki_vasthunnam.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="min-w-full md:min-w-[calc(25%-14px)] glass-card rounded-3xl overflow-hidden group">
+            <div class="overflow-hidden">
+                <img src="./assets/projects/usthad_bagath_singh.jpg"
+                    class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
         </div>
     </section>
 
@@ -197,7 +435,7 @@
                             digitalwarvfx@gmail.com
                         </a>
                     </div>
-                    
+
                     <!-- Address -->
                     <div class="bg-gray-900 p-8 rounded-lg text-center">
                         <div class="text-red-500 text-5xl mb-4">📍</div>
@@ -207,7 +445,7 @@
                             Telangana, India
                         </p>
                     </div>
-                    
+
                     <!-- Phone -->
                     <div class="bg-gray-900 p-8 rounded-lg text-center">
                         <div class="text-red-500 text-5xl mb-4">📞</div>
@@ -257,7 +495,8 @@
     </footer>
 
     <!-- Back to top button -->
-    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-red-600 text-white p-3 rounded-full opacity-0 invisible transition-all duration-300">
+    <a href="#" id="back-to-top"
+        class="fixed bottom-8 right-8 bg-red-600 text-white p-3 rounded-full opacity-0 invisible transition-all duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
@@ -270,4 +509,5 @@
         });
     </script>
 </body>
+
 </html>
